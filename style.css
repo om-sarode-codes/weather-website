@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+}
+
+
+/* =========================
+   WEATHER CONTAINER
+========================= */
+
+.weather-container {
+    width: 450px;
+    max-width: 100%;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    text-align: center;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.weather-container h1 {
+    font-size: 32px;
+
+    margin-bottom: 25px;
+
+    color: #222;
+}
+
+
+/* =========================
+   SEARCH BOX
+========================= */
+
+.search-box {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+
+/* INPUT */
+
+.search-box input {
+    flex: 1;
+
+    padding: 13px 15px;
+
+    font-size: 16px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.search-box input:focus {
+    border-color: #6c63ff;
+}
+
+
+/* SEARCH BUTTON */
+
+.search-box button {
+    padding: 13px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #6c63ff;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.search-box button:hover {
+    background: #574fd6;
+}
+
+
+.search-box button:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================
+   WEATHER SECTION
+========================= */
+
+.weather {
+    padding-top: 10px;
+}
+
+
+/* CITY */
+
+.city {
+    font-size: 28px;
+
+    color: #222;
+
+    margin-bottom: 10px;
+}
+
+
+/* TEMPERATURE */
+
+.temperature {
+    font-size: 45px;
+
+    color: #6c63ff;
+
+    margin-bottom: 10px;
+}
+
+
+/* DESCRIPTION */
+
+.description {
+    font-size: 18px;
+
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   WEATHER DETAILS
+========================= */
+
+.details {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+.details p {
+    flex: 1;
+
+    padding: 15px;
+
+    background: #f5f5f5;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    color: #333;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .weather-container {
+        padding: 20px;
+    }
+
+    .weather-container h1 {
+        font-size: 26px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input,
+    .search-box button {
+        width: 100%;
+    }
+
+    .temperature {
+        font-size: 38px;
+    }
+
+    .details {
+        flex-direction: column;
+    }
+}
